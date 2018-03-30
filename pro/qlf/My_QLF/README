@@ -1,0 +1,17 @@
+
+
+The ``expdust'' and ``fiducial'' data tables here
+were calculated using Ian's different selection functions, 
+but the "old" R06 k-corrections.  
+
+Meanwhile the ``expdust'' and ``fiducial_grid'' .dat files
+in the directory above, were computed using the new
+update McGreer et al. k-corrections...
+
+
+npr
+Wed Sep 26 17:10:17 PDT 2012
+
+
+
+

@@ -1,0 +1,45 @@
+	From: 	Martin White <mwhite@berkeley.edu>
+	Subject: 	K-corrections.
+	Date: 	May 16, 2011 4:44:48 PM PDT
+	To: 	Nic Ross <npross@lbl.gov>
+	Cc: 	Ian McGreer <imcgreer@as.arizona.edu>, Adam Myers <geordiemyers@gmail.com>
+
+Nic & Ian,
+
+I have been playing with K corrections using Ian's code for the last
+few days, and I thought I would summarize what I was finding.
+
+To begin with, I used Ian's code for mock quasars between 2.2<z<3 and
+kept track of the "model" r-i color, the "observed" r-i color, the
+continuum slope and the k-correction.  Only one of these is observable
+of course, and the difference between "model" and "observed" color is
+just the photometric noise.
+
+The figure "kcorr_vs_z" shows the (dashed) line one would expect for a
+power-law SED with a mean slope of -0.5 (which happens to be the mean
+in the models).  The points with error bars are the mean and standard
+deviation of the k-correction for all of the models in the file as a
+function of redshift.  The solid line connects the median of the
+distribution --- so you see mean and median are quite close.
+
+Next rmi_vs_alpha_all shows a first attempt at flattening the alpha
+vs. r-i relation.  The colors are different redshift bins, so you can
+see there is quite a lot of redshift dependence, but the idea is to
+try to guess alpha from the r-i color.  It's hard to see for the
+"all", so the next plot (rmi_vs_alpha_median) shows the medians of the
+bins.  You can see the higher redshift bins (blue and cyan) which will
+have the largest K corrections are relatively flat here.
+
+I show a zoom in of the high-z relation, where the K correction will
+be biggest, in rmi_vs_alpha_hiz.  A comparison of the actual K
+correction to the model using r-i as a proxy for alpha for the high z
+bin is shown in kcorr_hiz.  The cyan dots are true K correction vs. a
+model of 2.5(1+alpha)lg[(1+z)/3] with alpha=-0.02-(r-i)/0.215 while
+the red dots are the same but fixing alpha=-0.5.  Here I used the
+*observed* colors to see the effect of noise.
+
+Finally I show the offset from the alpha-(r-i) relation as a function
+of redshift in acorr_vs_z.
+
+Martin.
+

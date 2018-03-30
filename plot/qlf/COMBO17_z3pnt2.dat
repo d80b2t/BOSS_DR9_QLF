@@ -1,0 +1,9 @@
+##  Wolf et al., 2003, A&A, 408, 499 "The evolution of faint AGN between z~1 and z~5 from the COMBO-17 survey,  Table 4.  Redshifts:  3.0 - 3.6
+##  M145    MB	       nq	log_Phi_C17	log_Phi_C17_npr
+#-23.0	    -21.3	0	-999		-999					
+-24.0	    -22.2	5	-5.85		-5.85
+-25.0	    -23.2	5	-6.10		-6.10	   # alog10(8.0e-7)
+-26.0	    -24.2	3	-6.36		-6.36	   # alog10(4.0e-7)
+-27.0	    -25.2	3	-6.36		-6.36	   # alog10(4.0e-7)
+#-28.0	    -26.2	0	-999		-999	   # alog10(4.4e-7)
+-29.0	    -27.2	-999	-999		-6.824	   # alog10(1.2e-7)

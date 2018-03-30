@@ -1,0 +1,31 @@
+	From: 	Ian McGreer <imcgreer@as.arizona.edu>
+	Subject: 	something to mess with
+	Date: 	June 6, 2011 6:41:57 PM PDT
+	To: 	Nic Ross <npross@lbl.gov>
+	1 attachment: a_very_early_selfn.tar.gz
+
+Hi Nic-
+
+Here, as promised, are selection functions derived from the models. Just in
+brief: they have the W&P11 forest model, emission lines from the Van den
+Berk template, and both have a continuum distribution of -1.5 +/- 0.3
+blueward of LyAlpha. "modelA" then has -0.5 +/- 0.3 redward, while "expdust"
+has -0.17 +/- 0.22, but with a distribution of SMC dust that goes like
+exp(-E[B-V]/0.033). That distribution seems to fit the red tail well (I was
+rather excited about this until I discovered it appeared in a Phil Hopkins
+paper, though no one (including me, sadly) seems to have noticed as far as I
+can tell). I think "expdust" is a better prescription, whereas "modelA"
+matches Richards+06 more closely.
+
+Also, the files with "PQSOMIDZ" use the mid-z probabilities, obviously,
+whereas the others use the PQSO. It's sort of fun to blink the completeness
+maps and see the changes. Surprisingly, the dusty model *increases* the
+selection function, which I'm looking into, but if correct means that the
+dusty model is better, since it matches what XDQSO does. Interesting...
+
+I'll be around tomorrow but then travel/observing etc.
+
+Cheers
+-Ian
+
+

@@ -1,0 +1,70 @@
+	From: 	Ian McGreer <imcgreer@as.arizona.edu>
+	Subject: 	progress...
+	Date: 	September 12, 2011 2:17:37 PM PDT
+	To: 		Nic Ross <npross@lbl.gov>
+	
+	8 Attachments (563KB)
+
+
+Hi Nic-
+
+Just wanted to pass on some updates on my contributions to selection etc.
+for the luminosity function work. The main update is that I found a nasty
+bug in my code that, on the one hand, made a big improvement in terms of how
+things look, but on the other hand had led to much hair-pulling over the
+past few weeks. My main concern was that when I was at LBL I made a heatmap
+of an "empirical" selection function derived by asking how many variability
+selected quasars on Stripe 82 were also XD selected. This map showed a much
+lower selection efficiency than I was getting out of my models, which of
+course made me question the models, but irritatingly it just turned out to
+be a stupid bug in the code that took some time to figure out.
+
+I would say that, as of last week, I was ~80% confident that the models were
+working well, with the bug fix I'm more like 95%, and I'm really down to
+nitty gritty now where I can try to get the colors right at the few percent
+level, and in doing so actually constrain, e.g., the intrinsic continuum
+shape distribution.
+
+I've attached a bunch of things for your perusal, and after a couple more
+days to vet things I will post updates to the wiki page that is now woefully
+out of date.
+
+compare_stripe82_to_sims_selfn.png: blue error bars are the binned selection
+function derived by the fraction of ALL Stripe82 quasars that are selected
+by XD. The green dashed line is the XD selection function taken from one of
+my models. The red crosses are the model selection function set to match the
+binning of the real data, and except for bright objects in the z>3 bin it
+looks pretty good. Note that there are a lot of caveats here, the main one
+being that the simulations use a regular grid of (M,z) points, whereas the
+real data is drawn from a luminosity function, so they are not exactly
+matched in (M,z) space (I could account for this by using much smaller bins,
+but there aren't enough quasars for that). Overall I'm pretty happy with
+this, and after some tweaking I think a version of this plot would be useful
+for the paper.
+
+compare_stripe82_to_sims_heatmap.png: a 2D heatmap of the empirical Stripe82
+selection function [as in, N(XD)/N(ALL)]. Note that the bins with zero value
+just mean there were no quasars in that bin, not necessarily that the
+selection function is zero there.
+
+grid_*_i_z_PQSOMIDZmap.png: the same thing from the simulations. This
+compares favorably to the empirical version. The three different models are
+"fiducial", which basically matches
+Fan+99,Richards+06,Worseck&Prochaska10,etc.; "dusty", my model using an
+exponential dust distribution; "newcont", like dusty, but with a continuum
+distribution that reproduces the colors better. (here red does mean
+selection function = 0).
+
+grid_*_iPQSOMIDZ_sel.txt: the text table versions of the model selection
+functions in the format I sent you before.
+
+
+Quite a bit to digest, but if you're in the mood, I'm curious just how much
+changing the selection function will affect the derived luminosity function.
+If it's an easy thing to do, could you plot up the luminosity function for
+all three of those models? I'm curious to compare the results. I suppose I
+could do this myself, but I'm assuming you already have code for calculating
+the LF.
+
+Cheers,
+-Ian

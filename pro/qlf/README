@@ -1,0 +1,190 @@
+================================================================================
+==
+==    R E A D M E 
+==
+================================================================================
+
+/cos_pc19a_npr/BOSS/QLF/pro/qlf > 
+
+
+
+  qlf_iband.pro
+========================================
+produces these files:
+
+ -rw-r--r--@ 1 npr1  staff  11622 Mar 11 15:48 My_QLF_iband_dr3_temp.dat
+ -rw-r--r--@ 1 npr1  staff   3822 Mar 11 15:48 My_QLF_iband_boss_temp.dat
+ -rw-r--r--@ 1 npr1  staff   3822 Mar 11 15:48 My_QLF_iband_boss_wgt_temp.dat
+ -rw-r--r--@ 1 npr1  staff   3283 Mar 11 15:48 My_QLF_iband_boss_formatted4paper_temp.dat
+ -rw-r--r--@ 1 npr1  staff   3283 Mar 11 15:48 My_QLF_iband_boss_wgt_formatted4paper_temp.dat
+ 	     
+which can then be fed to 
+   ../../plot/qlf/qlf_plot_iband.pro
+or more likely: 
+   ../../plot/qlf/qlf_plot_iband_toz3pnt5
+	   
+
+ -rw-r--r--@ 1 npr1  staff  32604 Mar 11 15:48 My_QLF_iband_boss_narrowZ_temp.dat
+ -rw-r--r--@ 1 npr1  staff  29246 Mar 11 15:48 My_QLF_iband_boss_narrowZ_wgt_temp.dat
+ -rw-r--r--@ 1 npr1  staff   9514 Mar 11 15:48 My_QLF_iband_boss_narrowZ_wgt_formatted4paper_temp.dat
+ -rw-r--r--@ 1 npr1  staff   9514 Mar 11 15:48 My_QLF_iband_boss_narrowZ_formatted4paper_temp.dat
+
+gets fed into: 
+   qlf_plot_iband_bossrange.pro   (also in ../../plot/qlf/)
+
+
+For the Stripe 82 data/results, 
+    e.g., My_QLF_iband_boss_narrowZ_S82_McGkcor.dat, 
+you don't want to actually correct the data in anyway 
+with the selection function and hence: 
+    > diff My_QLF_iband_boss_temp.dat          My_QLF_iband_boss_S82_McGkcor.dat  
+    > diff My_QLF_iband_boss_narrowZ_temp.dat  My_QLF_iband_boss_narrowZ_S82_McGkcor.dat 
+doesn't give anything...
+
+
+N.B. You have to select in the qlf_iband.pro code:
+the completeness_level in order to make the e.g. S82
+measurements:
+	completeness_level = 0.85  ;; for DR9 at 0.85 completeness
+	completeness_level = 82    ;; for Stripe 82...
+
+
+ K-correction files
+========================================
+-rw-r--r--@ 1 npr1  staff   7706 Sep 25  2012 kcorr_Miz2_mcgreer_1210.6389v1.dat
+-rw-r--r--@ 1 npr1  staff    481 Apr 15 14:08 kcorr_Miz2_mcgreer_short.dat
+-rw-r--r--@ 1 npr1  admin   4068 Apr 15 16:17 kcorr_Miz2_mcgreerV2.dat
+-rw-r--r--@ 1 npr1  staff   7910 Apr 15 17:19 kcorr_Miz2_mcgreer_rescaleFe.dat
+
+kcorr_Miz2_mcgreer_1210.6389v1.dat (453 lines long, 3 lines of header) used in 1210.6389v1.
+kcorr_Miz2_mcgreerV2 and _short, are for the "least perturbation model", but currently
+		     		 don't have the correct delta_z binning. 
+kcorr_Miz2_mcgreer_rescaleFe.dat is another "v2" and is from the email from IDMcG on Apr 10, 2013, 7:01 PM. 
+				    and has an "Fe emission template is relatively stronger (as Gordon noted)."
+				    and gives rise to kcorr_compare_rescaleFe.png
+
+
+
+ For arXiv:1210.6389v2, a.k.a. "rv1:  we used:
+========================================
+
+For the 0<z<3.5 QLF:
+../../data/Richards06_Table06.dat
+-rw-r--r--  1 npr1  admin  3900 Apr 16 11:52 My_QLF_iband_boss_wgt_McGkcor_v2.dat
+../../pro/qlf/Palanque-Delabrouille_2012.dat
+
+and 
+-rw-r--r--   1 npr1  admin    32604 Sep 26  2012 My_QLF_iband_boss_narrowZ_S82_McGkcor.dat
+
+
+My_QLF_iband_boss_narrowZ_S82_McGkcor.dat
+   qlf_plot_iband_bossrange.pro   (also in ../../plot/qlf/)
+
+and 
+    kcorr_Miz2_mcgreer_R06spliced.dat
+(with a "d" !!!!) for the K-correction. 
+
+N.B. the "rv1" files 
+     e.g. My_QLF_iband_boss_wgt_McGkcor_rv1.dat
+that are *in* this directory have the spliceD k-corr. 
+cf. those in the My_QLF/ directory which have the splice.dat k-correction.
+
+
+for the formatted files:
+    My_QLF_iband_boss_wgt_formatted4paper_temp.dat  (is the output file...)
+--->
+    QLF_iband_boss_wgt_formatted4paper_McGkcor_rv1.dat
+with the readcol as:
+IDL> readcol, 'My_QLF_iband_boss_wgt_formatted4paper_temp.dat', $
+     red, aa, mag, bb, magmid, cc, nQ, format='(d,a,d,a,d,a,d) 
+IDL> print, (nQ)
+     	    23301.000
+This is Table 7. 
+
+
+
+ For arXiv:1210.6389v1 we used:
+========================================
+
+For the 0<z<3.5 QLF:
+../../data/Richards06_Table06.dat
+-rw-r--r--  1 npr1  admin  3822 Sep 26  2012 My_QLF_iband_boss_wgt_McGkcor.dat
+../../pro/qlf/Palanque-Delabrouille_2012.dat
+
+and 
+-rw-r--r--   1 npr1  admin    32604 Sep 26  2012 My_QLF_iband_boss_narrowZ_S82_McGkcor.dat
+
+
+My_QLF_iband_boss_narrowZ_S82_McGkcor.dat
+   qlf_plot_iband_bossrange.pro   (also in ../../plot/qlf/)
+
+and 
+    kcorr_Miz2_mcgreer_1210.6389v1.day 
+for the K-correction. 
+
+
+formatted files:
+QLF_iband_boss_wgt_formatted4paper_McGkcor.dat 
+was 
+Table 7. 
+
+
+QLF_iband_boss_narrowZ_formatted4paper_S82
+was Table 9. 
+
+
+
+
+
+ *nar*  files...
+========================================
+
+   QLF_iband_boss_narrowZ_formatted4paper_5731_tozeq4.dat	
+has, unsurprisingly, 5731 total(Nq) from 179 valid lines read. 
+These have 2.20<z<3.836. 
+There are 164 enteries with 2.20<z<3.50 and total(Nq) here
+is now, 5476.
+
+   QLF_iband_boss_narrowZ_formatted4paper_S82.dat has the same specs as
+"5371_tozeq4.dat" above, as in: total(NQ_full) = 5731, with 2.20<z<3.836
+from 179 lines, and total(NQ_full[w]) = 5476 with 2.20<z<3.50 and N= 164. 
+BUT!!!
+DEFINITELY HAS DIFFERENT PHI VALUES!!! 
+
+  QLF_iband_boss_wgt_formatted4paper_S82 is the "sister" to the immediately
+above file, in that it comes from the very same data and calculation, (and
+has all the same Nq etc.) numbers, it's just now in the 3 regular redshift bins. 
+
+
+   My_QLF_iband_boss_S82_March2012 
+has 6206 Nq over 2.01<z<4.75 and 
+has 5678 Nq over 2.40<z<4.25. 
+
+   My_QLF_iband_boss_S82_McGkcor.dat
+has, 5732.00 total(Nq) from 81 valid lines with 2.40<z<4.25 and
+     5476.00 total(Nq) from 65 valid lines with 2.20<z<3.50. 
+
+
+
+ SELECTION FUNCTION TESTS
+========================================
+
+ "fiducial_linetweak"
+My_QLF_iband_boss_wgt_20120619.dat 
+ and 
+My_QLF_iband_boss_narrowZ_wgt_20120619.dat
+ have 
+selec_func_file = 'fiducial_linetweak_grid_i_sel.txt
+ and gives rise to:
+QLF_iband_R06_z2_narrowZ_S82_20120807.ps 
+ in 
+/cos_pc19a_npr/BOSS/QLF/plot/qlf/
+
+
+
+	
+
+
+
+
+  

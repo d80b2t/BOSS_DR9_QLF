@@ -1,0 +1,111 @@
+===============================================================
+==
+==	R E A D M E
+==
+===============================================================
+
+/cos_pc19a_npr/BOSS/QLF/pro/models
+
+
+Purpose
+===============================================================
+The purpose of this README is to give a details for the various
+files that will generally perform e.g. double-power law fits
+to the BOSS DR9 QLF. 
+
+
+What certain files do:
+==============================================================
+
+
+  model_fits.pro
+  =================================================================
+  Generates a set of .dat files with e.g. the best-fit 
+  Croom et al. (2009) PLE model, best-fit LDDE model etc. 
+
+
+What certain files are:
+==============================================================
+
+chi_sq_PLE_model_a_20120810.dat   6000 lines   starts at z=0.000 goes to  5.960   in 0.004 z-steps.. 
+chi_sq_PLE_model_a_20120914.dat	  6000 lines   starts at z-0.500 goes to  6.460   in 0.004 z-steps.. 
+chi_sq_PLE_model_a_20120919.dat	  6000 lines   starts at z-0.300 goes to  6.260   in 0.004 z-steps.. 
+
+
+"Current O/P file..."
+alpha =       -5.00000
+     beta =       -2.50000
+ M_star_g =       -28.0000
+    M_g_c =       -23.9000
+    gamma =        0.700000    
+  zc_zero =        2.47000
+       p1 =        6.40000
+       p2 =       -3.30000
+and a 
+    chi_sq_min =  1875.1237 
+
+
+
+
+Croom09b_mLDDE_20120920v4 has: 
+    alpha =       -4.50000
+     beta =       -2.50000
+ M_star_g =       -27.7500
+    M_g_c =       -23.9000
+    gamma =       0.680000
+  zc_zero =        2.47000
+       p1 =        6.10000
+       p2 =       -4.00000
+and a 
+    chi_sq_min = 2220.7612
+and used:
+   p2_norm       = -4.80   
+   p2_step       = 0.2     
+
+
+
+Croom09b_mLDDE_20120920v3 has: 
+   alpha =  -3.50
+    beta =  -2.00
+M_star_g = -26.25 
+  M_g_c  = -23.90
+  gamma  =   0.68 
+zc_zero  =   2.47
+      p1 =   5.90
+     p2 =   -3.30
+     A = 10^(-8.60)
+and a 
+    chi_sq_min = 
+and used:
+   p2_norm       = -3.30   
+   p2_step       = 0.1     
+
+
+Croom09b_mLDDE_20120920v2 has: 
+    alpha =  -4.50
+    beta =  -2.50
+M_star_g = -27.75 
+  M_g_c  = -23.90
+  gamma  =   0.68 
+zc_zero  =   2.47
+      p1 =   5.80
+     p2 =   -3.30
+     A = 10^(-9.80)
+
+
+Croom09b_mLDDE_20120920   has
+   alpha =  -3.70
+    beta =  -2.34
+M_star_g = -26.69 
+  M_g_c  = -23.90
+  gamma  =   0.68 
+zc_zero  =   2.47
+      p1 =   6.28
+      p2 =  -2.85
+       A = 10^(-9.21)
+
+
+
+Last Updated:
+Tue Jul 10 14:19:41 PDT 2012	by	NPR
+    

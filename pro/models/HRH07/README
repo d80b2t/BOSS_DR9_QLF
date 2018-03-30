@@ -1,0 +1,74 @@
+===============================================================
+==
+==	R E A D M E
+==
+===============================================================
+
+/cos_pc19a_npr/BOSS/QLF/pro/models/HRH07
+
+
+Purpose
+===============================================================
+The purpose of this directory is for the place to store the 
+HRH07 models and calculations. This was initially motivated 
+for the BOSS DR9 QLF paper. 
+
+
+ URL
+============================================================
+ https://www.cfa.harvard.edu/~phopkins/Site/qlf.html
+
+ OUTPUTS
+============================================================
+1.  observed luminosity in the band, in (log_{10}(L [erg/s]))
+2 : corresponding absolute monochromatic AB magnitude at the given frequency nu.
+3 : corresponding observed monochromatic flux in (log_{10}(S_nu [milliJanskys])) 
+4 : corresponding bolometric luminosity (given the median bolometric 
+5 : comoving number density per unit log_{10}(luminosity) : 
+
+
+
+
+ USEAGE
+============================================================
+  ./qlf_calc nu z  model  > file.dat
+
+where:
+	nu is the *rest frame* frequency of interest, in Hz or use the
+	codes: 0.0 = bolometric, -1.0 = B-band, -2.0 = mid-IR (15 microns) -3.0 = soft X-ray -4.0 = hard X-ray 
+	
+	z is redshift
+	
+	model is an optional flag with:	
+	0 = "Full" (default)  1 = "PLE"   6 = "LDDE"	 7 = "PDE"
+
+Thus:
+    > qlf_calc -1.0 2.0   > filename
+        will print the B-band qlf at z=2 to 'filename'
+
+
+ And to make 1450A models/plots:
+============================================================
+  ./qlf_calc 2.06897e15 3.25 > HRH07_1450A_z3.2.dat
+
+
+ Intital comments
+============================================================
+Compiled the .c code (!!) and ran it for a whole bunch
+of redshifts (the R06 QLF range, as well as the narrow-z
+BOSS range) for the "Full model:
+
+
+./qlf_calc -1.0 0.49 > HRH07_Bband_z0.49.dat
+./qlf_calc -1.0 4.75 > HRH07_Bband_z4.75.dat
+
+./qlf_calc -1.0 2.0 0  gives HRH07_Bband_z2.00.dat
+
+
+Directory Structure
+===============================================================
+
+
+
+Last Updated:
+Wed Aug  1 11:47:12 BST 2012	by NPR

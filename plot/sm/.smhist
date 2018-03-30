@@ -1,0 +1,51 @@
+quit
+macro read r06.sm
+oplotlfcombo17ple
+2.0
+print, Mi
+quit
+macro read r06.sm
+qlf
+xis_DR2
+        DATA "/cos_pc19a_npr/programs/dat/DR2/DR2_k_output_080604.dat"
+        READ {log_r 1 xi 2 xi_error 3 DD_sep 4  DR_sep 5}
+xis_DR2
+macro read r06.sm
+xis_DR2
+quit
+macro read r06.sm
+qlf
+oplotlfcombo17ple
+2
+quit
+macro read r06.sm
+qlf
+oplotlfcombo17ple
+2.0
+oplotlfcombo17ple
+2.2
+quit
+macro read r06.sm
+qlf
+quit
+macro read r06.sm
+quit
+macro read r06.sm
+qlf
+quit
+macro read r06.sm
+qlf
+macro read r06.sm
+qlf
+quit
+macro read r06.sm
+qlf
+quit
+macro read r06.sm
+qlf
+quit
+macro read r06.sm
+qlf
+oplotlfcombo17ple
+2.0
+quit

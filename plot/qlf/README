@@ -1,0 +1,33 @@
+===============================================================
+==
+==	R E A D M E
+==
+===============================================================
+
+/cos_pc19a_npr/BOSS/QLF/plot/qlf
+
+
+
+I'm pretty/very sure that the files:
+    chi_sq_PLE_model_McG_2.2z3.5.dat
+and 
+    chi_sq_loglinear_LEDE_model_McG_2.2z3.5.dat
+were generated on my "old" MacBook Pro (since I currently)
+can't "printf" in IDL demo mode...) sometime close or around 
+11th/12th March 2013. These should come directly from 
+the IDMcG fits given in Table 1 of BOSS_QLF_rv1.
+
+
+
+Fig. 12 in http://arxiv.org/abs/1210.6389v1 is:
+     QLF_selfunc_divfid_noS82_McGkcor.ps
+and uses:
+    ../../pro/qlf/My_QLF_iband_boss_wgt_McGkcor.dat
+    ../../pro/qlf/My_QLF_iband_boss_wgt_fiducial_grid.dat
+    ../../pro/qlf/My_QLF_iband_boss_wgt_expdust.dat 
+
+Slightly, (very!) confusingly, recall that the "fiducial_grid" model, 
+is actually the old(er) VdB lines model, with the "McGkcor" model being the
+one that is "fiducial_linetweak_grid_i_sel.txt" in the ~/QLF/completeness 
+directory. 
+

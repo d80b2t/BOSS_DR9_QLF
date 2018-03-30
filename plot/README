@@ -1,0 +1,27 @@
+================================================
+==
+==
+== R E A D M E
+==
+==
+================================================
+/cos_pc19a_npr/BOSS/qlf/plot > 
+
+
+  i-band
+=========================
+
+QLF_iband_R06_z2_comp70_newcont.ps
+QLF_iband_R06_z2_comp70_dusty.ps
+
+    and thus Area_boss= 1849.04 (deg^2)
+
+
+QLF_iband_R06_z2_S82_noWgt  
+    and 
+    (old_plots/QLF_iband_R06_z2_20110527)
+    are/should be the QLFs from S82, and were generated
+    by e.g.
+    data = mrdfits('../../../Stripe82/spAll-v5_4_14_S82.fits', 1)
+    old_pro/qlf_iband_20110609.pro 
+

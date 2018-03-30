@@ -1,0 +1,81 @@
+	From: 	Gordon Richards <gtr@physics.drexel.edu>
+	Subject: 	Re: New confusion due to Wolf and Siana...
+	Date: 	August 6, 2012 10:00:44 PM GMT+01:00
+	To: 	Nic Ross <npross@lbl.gov>
+	Cc: 	Martin White <mwhite@berkeley.edu>, N. Palanque-Delabrouille <nathalie.palanque-delabrouille@cea.fr>, Adam Myers <geordiemyers@gmail.com>
+
+
+Nic et al.
+
+Here's a quick summary of my thoughts on the magnitude conversion stuff.
+
+First, for a spectral index of alpha_nu=-0.5, the following is true:
+L_i > L_g
+M_i < M_g
+m_i < m_g  (consistent with g-i~0.25)
+
+Then, generically (for an AB to AB conversion):
+M_XXXX = M_YYYY + 2.5*alpha_nu*log(XXXX/YYYY)
+for XXXX, YYYY in wavelength units
+
+if XXXX<YYYY, then M_XXXX > M_YYYY since the right-hand term is positive.
+So, M_g > M_i.  Check.
+
+For Mi(z=2) we *define* the K-correction to be zero at z=2. Normally the
+K-correction would be:
+K = -2.5*(1+alpha_nu)*log(1+z)
+which for z=2 is
+-0.596
+
+So, we have to add 0.596 to the K-correction.  Thus Table 4 in R+06 is correct.
+However, Equation 1 is *wrong*.  There I added 0.596 to the absolute magnitude,
+not the K-correction.  Since the K-correction comes in with a negative sign,
+the sign here is wrong.  The correct equation is
+
+Mi(z=2) = Mi(z=0) + 0.596
+or
+Mi(z=0) = Mi(z=2) - 0.596
+
+Indeed, we can check this using the formula above as this definition
+is equivalent to shifting the effective wavelength of the i-band to
+2490.33 Angstroms.  So,
+
+Mi(z=2) = Mi(z=0) + 2.5*alpha_nu*log(7471/3/7471)
+       = Mi(z=0) + 2.5*alpha_nu*log(2490.33/7471)
+   = Mi(z=0) + 2.5*alpha_nu*log(1/(1+2))
+       = Mi(z=0) + 0.596
+
+Fortunately, for all of the analysis in the paper, it looks like what
+I actually did was correct.
+
+But this does have ramifications for Equation 3, here
+M_1450 = Mi(z=0) + 2.5*alpha_nu*log(1450/7471)
+so the _form_ of this is correct, but with the Equation 1 being wrong,
+the substitution is incorrect.  The correct equation is
+
+M_1450 = Mi(z=2) - 0.596 + 2.5*alpha_nu*log(1450/7471)
+or
+M_1450 = Mi(z=2) + 2.5*alpha_nu*log(1450/2490.33)
+
+So that
+M_1450 = Mi(z=2) + 0.294
+
+Checking:
+
+Mi(z=2) has an effective wavelength of 2490.33 and 1450 isn't that far
+from 2490, so the offset can't be too large.  The sign is also correct
+as M_1450 > M_2490.33
+
+
+I haven't looked into the conversion from B_J or R yet, but any Vega
+to AB system can have a much larger correction depending on the AB mag
+of Vega at the effective wavelength.  So, I can't yet say whether the
+conversion to M_1450 in Croom et al. 2009 are correct or not.
+
+I'll have to look to see what ramifications this has for any of the
+curves in Figures 19 and 20 (i.e. those derived from M_1450).
+
+But, note that
+ M_{1450, AB}  =  M_i(z=2) - 0.98
+is clearly wrong as it both has the wrong sign and the value is too large
+for a correction only going from 2490A to 1450A.x

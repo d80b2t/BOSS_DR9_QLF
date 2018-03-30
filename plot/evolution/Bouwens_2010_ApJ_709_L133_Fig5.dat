@@ -1,0 +1,16 @@
+# Determinations of the UV luminosity density and SFR density, integrated to 0.08 L∗z=3 (−18.3 AB mag) as appropriate for the z ∼ 8 sample, as a function of redshift. The large red circle shows the constraints we can set on this density at z ∼ 8 from the current Y105 -dropout search (see also Section 4.3). The lower set of points (and blue region) show the SFR density determination inferred directly from the UV light, and the upper set of points (and orange region) show what one would infer using dust corrections inferred from the UV-continuum slope measurements (e.g., Bouwens et al. 2009, 2010). Note that the dust correction is essentially zero at z > 6. Also included in this figure are the determinations at z ∼ 7 from the HUDF WFC3/IR z-dropout search (Oesch et al. 2010a: solid red square), the Bouwens et al. (2007) determination at z ∼ 4–6 (open red circles), the Reddy & Steidel (2009) determinations at z ∼ 2–3 (green crosses), and the Schiminovich et al. (2005) determinations at z 􏰀 2 (black hexagons). A systematic increase in the SFR density from z ∼ 8 to z ∼ 2 is clear.
+#
+# SFR density ("rho_SFR") in log M_sol, yr^-1 Mpc^-3
+#
+# redshift	rho_SFR (blue)	rho_SFR_wCorr (biege)
+0.4		-2.55		-2.0	
+0.6		-2.38		-1.8
+0.8		-2.15		-1.6
+1.0		-2.17		-1.50
+2.0		-1.72		-1.15
+2.5		-1.45		-0.65
+3.8		-1.60		-1.00
+5.0		-1.90		-1.70
+5.8		-2.0		-1.80		
+7.0		-2.2		-2.2
+8.2		-2.75		-2.75

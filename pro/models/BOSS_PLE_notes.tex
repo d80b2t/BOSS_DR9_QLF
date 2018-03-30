@@ -1,0 +1,245 @@
+
+
+%%
+%%  W I T H    T H E     2 S L A Q       D A T A S E  T ...
+%%
+
+      11       6       3       567.2918       554.9965  -5.9400  -3.5000  -1.5000   1.4000  -0.3280 -22.5000
+      11       6       3       554.9965       518.8752  -5.9400  -3.5000  -1.5000   1.8000  -0.4280 -21.7500???
+
+
+
+%%
+%%  W I T H    T H E     S T R I P E    8 2      D A T A S E  T ...
+%%
+
+With:: 
+    ../../pro/qlf/QLF_iband_sdss_s82_narrow_boss21_wSelfn_formatted_McGkcor.dat
+and 
+    w_zbin = where(z_full ge 2.20 and Z_full le 3.50, N)
+thus 120 points, fitting over 6 parameters gives = 113 dof. 
+
+
+   Phi_star_norm = -6.40
+   phi_step      =  0.016  
+
+   alpha_norm    = -4.00
+   alpha_step    =  0.20    
+   beta_norm     = -3.00
+   beta_step     =  0.20    
+   
+   Mstar0_g_norm = -27.00    
+   Mstar0_g_step =   0.12
+
+   k1_norm       = 0.25     ;; 1.30      ;; 
+   k1_step       = 0.01
+   k2_norm       = -0.400
+   k2_step       = 0.04
+
+gives::
+      15       6       8       288.5033       286.5531  -6.1600  -2.8000  -1.4000   0.2800  -0.1200 -26.7600
+
+
+   Phi_star_norm = -6.16
+   phi_step      =  0.016  ; ((-6.0) - (-5.6))/25.
+
+   alpha_norm    = -4.00
+   alpha_step    =  0.20     
+   beta_norm     = -3.00
+   beta_step     =  0.20     
+   
+   Mstar0_g_norm = -27.00    
+   Mstar0_g_step =   0.12
+
+   k1_norm       = 0.25     ;; 1.30      ;; 
+   k1_step       = 0.01
+   k2_norm       = -0.400
+   k2_step       = 0.04
+
+gives::
+       0       6       8       288.8104       286.5531  -6.1600  -2.8000  -1.4000   0.2800  -0.1200 -26.7600
+
+
+
+   Phi_star_norm = -6.00
+   phi_step          =   0.016    ;; ((-6.0) - (-5.6))/25.
+
+   alpha_norm    = -4.00
+   alpha_step    =  0.20     
+   beta_norm     = -3.00
+   beta_step     =  0.20     
+   
+   Mstar0_g_norm = -27.00    
+   Mstar0_g_step =   0.12
+
+   k1_norm       = 0.30    
+   k1_step       = 0.01
+   k2_norm       = -0.400
+   k2_step       = 0.04
+
+and::
+       5       7       9       291.4850       291.1026  -5.9200  -2.6000  -1.2000   0.3000  -0.1200 -26.0400
+
+
+
+   Phi_star_norm = -6.57  
+   phi_step      = 0.05
+
+   alpha_norm    = -6.50
+   alpha_step    = 0.50  
+   beta_norm     = -3.00
+   beta_step     = 0.50 
+   
+   Mstar0_g_norm = -26.5    
+   Mstar0_g_step = 0.25
+
+   k1_step       = 0.05  
+   k1_norm       = 0.25 
+   k2_step       = 0.1
+   k2_norm       = -0.82800
+
+and::
+      15       8       4       299.0165       298.9566  -5.8200  -2.5000  -1.0000   0.3500  -0.1280 -25.5000
+and 
+      116468 Oct  9 18:39 QLF_iband_PLE_bestfit_params_chi2s_coarse.ps
+      1637705603 116468 QLF_iband_PLE_bestfit_params_chi2s_coarse.ps
+
+
+
+
+
+w_zbin = where(z_full ge 0.20 and Z_full le 2.20, N)
+ 
+  No of points that we will be using...          74
+  %% ``Coarse setings''^{*}: 
+  %% ^{*}:details of "coarse" settings at bottom.
+     102       5       3       224.7185       213.6308  -6.2500  -4.0000  -1.5000   1.1600  -0.2280 and  -23.5000
+%% with: the point at:
+  1.600 &   -23.841 &   -23.850 &      38 &   -5.683 &  336.786
+  No of points that we will be using...          75
+       102       5       3       224.7443       213.6312  -6.2500  -4.0000  -1.5000   1.1600  -0.2280 -23.5000
+%% but not the point at:
+    #  2.007 &   -24.427 &   -24.450 &      23 &   -5.928 &  246.060
+    No of points that we will be using...          74
+     116       6       3       202.2375       199.0331  -6.1100  -3.5000  -1.5000   1.1600  -0.2280 -23.2500
+%% but not the point at:
+   #  0.490 &   -22.950 &   -22.950 &      39 &   -6.350 &  174.240 \\
+   No of points that we will be using...          73
+{\bf      116       6       3       166.1977       160.5576  -6.1100  -3.5000  -1.5000   1.1600  -0.2280 -23.2500}
+
+
+%
+% Coarse binning
+%
+w_zbin = where(z_full ge 1.0 and Z_full le 2.20, N)    ;; N = 50
+No of points that we will be using...          50
+     101       5       3        84.9920        77.9919  -6.2600  -4.0000  -1.5000   1.4600  -0.3280 -23.0000
+
+
+w_zbin = where(z_full ge 0.2 and Z_full le 2.60, N)    ;; N = 89
+     No of points that we will be using...          89
+%% Not letting k1,k2 vary...
+      99       5       3       826.6520       792.4140  -6.2800  -4.0000  -1.5000   1.1600  -0.2280 -23.5000
+     No of points that we will be using...          88
+      99       5       3       809.1183       773.5386  -6.2800  -4.0000  -1.5000   1.1600  -0.2280 -23.5000
+%% This *is* letting k1,k2 vary...
+     No of points that we will be using...          89
+%     151       7       4       671.5476       634.5168  -5.7600  -3.0000  -1.0000   1.4600  -0.3280 -22.0000
+     No of points that we will be using...          88
+%     151       7       4       647.5832       608.8211  -5.7600  -3.0000  -1.0000   1.4600  -0.3280 -22.0000
+     151       7       4       647.5832       608.8211  -5.7600  -3.0000  -1.0000   1.4600  -0.3280 -22.0000
+
+
+
+
+%%
+%%  S Q R T (zz) models...
+%% 
+%%   COARSE::
+No of points that we will be using...          88
+
+     106       6       3       845.1095       836.3695  -6.2100  -3.5000  -1.5000   1.0000  -0.2280 -23.2500
+%% MEDIUM... with ALPHA, BETA # of bins from 10
+No of points that we will be using...          73
+         %% 7       9       7       413.2364       408.9793  -6.4300  -4.0500  -1.6500   1.3000  -0.2280 -23.2500
+         %% 8       9       7       308.6895       306.0694  -6.4200  -4.0500  -1.6500   1.5000  -0.2280 -23.0000
+          18       9       9       292.1335       291.9978  -6.3200  -4.0500  -1.5500   1.6000  -0.2280 -22.7500
+
+%% BUT!!!! PUTTING THE ALPHA, BETA # of bins from 10 to 20 gives:
+      33      17      11       259.0632       254.5856  -6.1700  -3.6500  -1.4500   1.6000  -0.3280 -22.5000
+
+        %% 10       9       7       310.0167       308.2033  -6.4000  -4.0500  -1.6500   1.7000  -0.2280 -22.7500
+%No of points that we will be using...          50
+      43      19      13       107.1656       106.4022  -6.0700  -3.5500  -1.3500   1.3000  -0.3280 -22.7500
+No of points that we will be using...          88
+      27      14      11      2047.8923      2042.6291  -6.2300  -3.8000  -1.4500   1.3000  -0.3280 -22.7500
+
+
+
+
+%%
+%%  exp( k_1 * tau) models...
+%%       bit of a waste of time!!
+No of points that we will be using...          50
+   1.0<z<2.20:
+k_tau = 7.00000
+      10       5       3       182.2523       160.8852  -6.2700  -4.0000  -1.5000   1.1600  -0.2280 -24.7500
+
+
+No of points that we will be using...          47
+   2.2<z<3.50:
+      13       7       4     12734.3115     12582.2090  -5.9700  -3.0000  -1.0000   1.1600  -0.2280 -24.2500
+WTF!!
+
+
+
+
+
+\subsection{COARSE SETTINGS}
+phi_star_bins = 250
+phi_star = fltarr(phi_star_bins)
+
+%% alpha, the (bright-end in C09b) slope
+alpha_bins = 10     ;; for testing..
+alpha = fltarr(alpha_bins)
+
+%% beta, the (faint-end slope in C09b)
+beta_bins = 10      ;; for testing...
+beta = fltarr(beta_bins)
+
+;; 
+;; Mstar_g  = Mstar0_g  - 2.5*(k1*zz + k2*zz*zz)
+;;
+Mstar0_g_bins = 25 
+Mstar0_g  = fltarr(Mstar0_g_bins)
+
+k1_bins = 10 
+k2_bins = 10 
+
+%---------------------------------------------------------------
+% 
+%  P  L  E 
+%
+%Mstar0_g = -22.17
+k1 = 1.46
+k2 = -0.328
+% Phi_star = 10^(-5.84)
+
+if coarse_or_fine  eq 0 then begin
+   Phi_star_norm = -7.27
+   alpha_norm    = -6.50
+   beta_norm     = -3.00
+   
+   Mstar0_g_norm = -26.5    
+   k_tau_norm    = 4.00      %% only used for te exp^tau model...
+
+   alpha_step    = 0.50     
+   beta_step     = 0.50     
+   phi_step      = 0.01
+   Mstar0_g_step = 0.25
+   k1_step       = 0.1        ;k1_bins = 10 
+   k1_norm       = 0.9600    ;; 
+   k2_step       = 0.1
+   k2_norm       = -0.82800
+   k_tau_step    = 0.2    %% only used for te exp^tau model...
+endif

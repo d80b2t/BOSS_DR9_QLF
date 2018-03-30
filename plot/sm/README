@@ -1,0 +1,14 @@
+
+
+> sm
+
+
+/cos_pc19a_npr/BOSS/QLF/plot/sm > sm
+Hello Nicholas, please give me a command
+: oplotlfcombo17ple
+oplotlfcombo17ple is not a macro; aborting. Rest of line: 
+: macro read r06.sm
+: oplotlfcombo17ple
+argument 1 to oplotlfcombo17ple:  
+>> 2.0
+: 

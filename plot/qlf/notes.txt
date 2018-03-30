@@ -1,0 +1,59 @@
+
+
+  CURRENT  PLOTS
+=======================
+
+The (as-close-as-dammit-is-to-swearing) final plots that are in the paper are:
+    
+    QLF_iband_R06_BOSS_DR9_WandWO_wgts_boss21_20120619.ps
+    QLF_iband_R06_z2_narrowZ_S82_20120807.ps
+   
+These are generated from:
+      
+      My_QLF_iband_boss_20120619.dat	
+      My_QLF_iband_boss_wgt_20120619.dat
+      My_QLF_iband_boss21_wSelfn_20120305.dat
+and
+      My_QLF_iband_boss_narrowZ_S82_20120807.dat
+      My_QLF_iband_boss_narrowZ_wgt_20120619.dat
+
+respectively. 
+	
+
+Tue Jul 10 10:53:42 PDT 2012
+
+     
+
+
+
+  OLDER  PLOTS
+=======================
+
+	QLF_iband_R06_z2_narrowZ_S82_20120622.ps
+was the immediate pre-cursor to
+    	QLF_iband_R06_z2_narrowZ_S82_20120807.ps
+and is generated from:
+        My_QLF_iband_boss_narrowZ_S82_wExtinc_20120622
+
+
+QLF_iband_R06_z2_narrowZ_S82_oldfiducial_grid_i_sel
+	from:
+	2467708184 32604 ~/QLF/pro/qlf/My_QLF_iband_boss_narrowZ_S82.dat	
+	76057124 103005   ~/QLF/completeness/oldfiducial_grid_i_sel.txt
+	Using $BOSSQSOMASK_DIR/compfiles/xdspallmask_DR9.fits at 0.85 completeness
+
+	Represented in:
+	My_QLF_iband_boss_wgt_oldfiducial_grid_0pnt85.dat
+	My_QLF_iband_boss_narrowZ_wgt_oldfiducial_grid_0pnt85.dat
+
+
+QLF_iband_R06_z2_narrowZ_S82_oldfiducial_grid_newlinesvrev_i_sel.pdf
+
+	2467708184 32604 ~/QLF/pro/qlf/My_QLF_iband_boss_narrowZ_S82.dat	
+	3260899949 103005 ~/QLF/completeness/oldfiducial_grid_newlinesvrev_i_sel.txt
+	Using $BOSSQSOMASK_DIR/compfiles/xdspallmask_DR9.fits at 0.85 completeness
+
+	Represented in:
+	My_QLF_iband_boss_wgt_oldfiducial_grid_newlinesvrev_0pnt85.dat
+	My_QLF_iband_boss_narrowZ_wgt_oldfiducial_grid_newlinesvrev_0pnt85.dat
+

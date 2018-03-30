@@ -1,0 +1,215 @@
+#DEVICE x11
+#DEVICE nodevice
+#DEVICE postscript		# This little command prints out your graph!
+
+
+xis
+	ERASE
+	DEVICE postfile xis_from_sm_temp.ps
+	define xlim1 -0.6	# default -1.0 DANGER!! Do not change this
+	define xlim2 2.0	# default  2.0 unless you really know what
+	define ylim1 -2.0	# default -2.0 you're doing Nic!!
+	define ylim2 2.2	# default  2.6, changed to 2.2 for paper...
+
+	#define xlim1 -20.6	# default -1.0 DANGER!! Do not change this
+	#define xlim2  32.0	# default  2.0 unless you really know what
+	#define ylim1 -10.0	# default -2.0 you're doing Nic!!
+	#define ylim2  -4.2	# default  2.6, changed to 2.2 for paper...
+
+	define x1 4500
+	define x2 31500
+	define y1 4500
+	define y2 31500
+	define xw ($x2-$x1)
+	define yw ($y2-$y1)
+
+	LWEIGHT 4
+	ltype 0
+	ctype black
+	EXPAND 2.2
+	location $x1 $x2 $y1 $y2
+	limits $xlim1 $xlim2 $ylim1 $ylim2  
+	#limits 50 180 -0.01 0.04
+	#box 
+	define TeX_strings 1
+	
+	#expand 1.7
+	angle 0	
+	XLABEL log_{10} (s/Mpc h^{-1})
+	YLABEL log_{10} \xi(s) 
+	angle 90
+	axis $ylim1 $ylim2 -1 100   $x1 $y1 $yw 2 1	
+	axis $ylim1 $ylim2 -1 100   $x2 $y1 $yw 0 0	
+	#axis -1.39 $ylim2 -1 100    $x1 10000 21000 2 1
+	#axis -0.04 0.04  0.01 0.02  $x1 4000  6000 2 1
+	#axis -1.39 $ylim2 -1 100    $x2 10000 21000 0 0
+	#axis -0.04 0.04  0.01 0.02  $x2 4000  6000 0 0
+
+	angle 0
+	axis $xlim1 $xlim2 -1 100  $x1 $y1 $xw 1 2
+	axis $xlim1 $xlim2 -1 100  $x1 $y2 $xw 0 1
+
+	#AXIS A1 A2 VSMALL VBIG      AX AY ALEN ILABEL ICLOCK
+        #AXIS A1 A2 VSMALL VBIG VLAB AX AY ALEN ILABEL ICLOCK
+        #AXIS A1 A2 ASMALL ABIG      AX AY ALEN ILABEL ICLOCK
+	RELOCATE -1 0	
+	#LTYPE 2
+	#DRAW 100 0
+
+xis_DR2
+
+	#DATA k_output_2003B.dat 
+	#DATA k_output3034star.dat
+	DATA "/cos_pc19a_npr/programs/dat/DR2/DR2_k_output_080604.dat"
+	#DATA DR1_k_output_rho20all.dat
+	#DATA DR2_k_output.dat"  #from correl_two
+	#	DATA DR2_k_output_new.dat #from correl_four_new
+	READ {log_r 1 xi 2 xi_error 3 DD_sep 4	DR_sep 5} 
+
+	#from correl_two and correl_four_new
+	EXPAND 2.2
+	#SET xi = (xi/2.0)
+	SET xi_lg = lg(xi)
+	SET r = (10**log_r)
+	ctype black
+	PTYPE 6 1
+	POINTS log_r (xi_lg) 			 # Plot i against ii
+	logerr log_r xi_lg (3*xi_error)
+
+	#DATA "/cos/pc19a/npr/programs/dat/DR2/DR2_k_output_080604.dat"
+	#READ {log_r 1 xi 2 xi_error 3 DD_sep 4	DR_sep 5} 
+	#CTYPE yellow
+	#POINTS log_r (xi)  	
+	LTYPE 0
+	EXPAND 2.2
+	RELOCATE 0.8 2.0	
+	#LABEL \point 4 3 24 490 DR2 LRGs
+	#LABEL \point 6 1 SDSS DR2 LRGs
+	#LABEL \point 4 3 12699 DR1 LRGs
+	RELOCATE -0.4 -0.8 
+	LABEL \point 6 1 SDSS DR2 LRGs
+	#RELOCATE -0.6 -1.35
+	#LABEL \rho_{Random}= 20\rho_{Data}
+	RELOCATE -0.6 -1.65
+	EXPAND 1.4
+	#LABEL Poisson errors
+
+qlf
+	ERASE
+	DEVICE postfile qlf_from_sm_temp.ps
+
+	define xlim1 -20.6	# default -1.0 DANGER!! Do not change this
+	define xlim2 -32.0	# default  2.0 unless you really know what
+	define ylim1 -10.0	# default -2.0 you're doing Nic!!
+	define ylim2  -4.2	# default  2.6, changed to 2.2 for paper...
+
+	define x1 4500
+	define x2 31500
+	define y1 4500
+	define y2 31500
+	define xw ($x2-$x1)
+	define yw ($y2-$y1)
+
+	LWEIGHT 4
+	ltype 0
+	ctype black
+	EXPAND 2.2
+	location $x1 $x2 $y1 $y2
+	limits $xlim1 $xlim2 $ylim1 $ylim2  
+	define TeX_strings 1
+	
+	angle 0	
+	XLABEL log_{10} (s/Mpc h^{-1})
+	YLABEL log_{10} \xi(s) 
+	angle 90
+	axis $ylim1 $ylim2 -1 100   $x1 $y1 $yw 2 1	
+	axis $ylim1 $ylim2 -1 100   $x2 $y1 $yw 0 0	
+
+	angle 0
+	axis $xlim1 $xlim2 0 2.0  $x1 $y1 $xw 1 2
+	axis $xlim1 $xlim2 0 2.0  $x1 $y2 $xw 0 1
+
+	RELOCATE -1 0	
+
+
+oplotlfcombo17ple       1       #overplot the 2dF curves
+
+
+        define z ($1)
+
+                define MBo (-25-5*lg(65/70))
+
+        define a0 (-5.620+3*lg(70/65))
+                define a1 0.1845
+                define a2 -0.02652
+                define b1 -1.3455
+        define b2 80.845
+                define b3 -127.32
+
+        #define MBo $($MBo+1.75-0.24)
+
+                #set MB = {-22.125 -22.375 -22.625 -22.875 -23.125 -23.375 -23.625 -23.875 -24.125 -24.375 -24.625 -24.875 -25.125 -25.375 -25.625 -25.875 -26.125 -\
+26.375 -26.625 -26.875 -27.125 -27.375 -27.625 -27.875 -28.125 -28.375 -28.625 -29.125 -29.375 -29.625 -29.875 -30.125 -30.375 -30.625 -30.875}
+
+                set MB = -31.0,-22.0,0.05
+
+                define x $(lg((1.0+$z)/(1.0+2.0)))
+
+        define MBz ($MBo + $b1*$x + $b2*$x*$x + $b3*$x*$x*$x)
+            set mu = (MB - $MBz)
+
+                set PHIz = $a0 + $a1*mu + $a2*mu*mu
+
+                #Convert to Mi (from M_1450)
+            #1450 to B, z=2, B to i, Vega, K_em
+                #set Mi = (MB+1.75)-0.596-0.287-0.14+0.177
+        #Use Eq. 3 instead
+                set Mi = MB-1.486
+
+                ltype 2
+            ctype grey
+            connect Mi PHIz
+                ctype default
+                ltype 0
+
+
+
+oplotlfcombo17pde       1       #overplot the 2dF curves
+
+                define z ($1)
+
+                define MBo (-25-5*lg(65/70))
+
+                #define a0 -5.600
+                define a1 0.2221
+                define a2 -0.03536
+                define c0 (-5.600+3*lg(70/65))
+                define c1 0.3599
+                define c2 -15.574
+
+                #set MB = {-22.125 -22.375 -22.625 -22.875 -23.125 -23.375 -23.625 -23.875 -24.125 -24.375 -24.625 -24.875 -25.125 -25.375 -25.625 -25.875 -26.125 -\
+26.375 -26.625 -26.875 -27.125 -27.375 -27.625 -27.875 -28.125 -28.375 -28.625 -29.125 -29.375 -29.625 -29.875 -30.125 -30.375 -30.625 -30.875}
+
+                set MB = -31.0,-22.0,0.05
+
+                define x $(lg((1.0+$z)/(1.0+2.0)))
+
+                #define MBz ($MBo + $b1*$x + $b2*$x*$x + $b3*$x*$x*$x)
+                set mu = (MB - $MBo)
+
+                define a0 ($c0 + $c1*$x + $c2*$x*$x)
+
+                set PHIz = $a0 + $a1*mu + $a2*mu*mu
+
+                #Convert to Mi (from M_1450)
+                #1450 to B, z=2, B to i, Vega, K_em
+                #set Mi = (MB+1.75)-0.596-0.287-0.14+0.177
+                #Use Eq. 3 instead
+                set Mi = MB-1.486
+
+                #print {MB PHIz}
+
+                ctype grey
+                connect Mi PHIz
+                ctype default
+                ltype 0
